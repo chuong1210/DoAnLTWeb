@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\chuon\\Downloads\\QuanLyBanSach\\WebStore\\WebStore\\WebStore.csproj": {}
+    "C:\\Users\\chuon\\source\\repos\\WebStore\\WebStore\\WebStore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\chuon\\Downloads\\QuanLyBanSach\\WebStore\\WebStore\\WebStore.csproj": {
+    "C:\\Users\\chuon\\source\\repos\\WebStore\\WebStore\\WebStore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\chuon\\Downloads\\QuanLyBanSach\\WebStore\\WebStore\\WebStore.csproj",
+        "projectUniqueName": "C:\\Users\\chuon\\source\\repos\\WebStore\\WebStore\\WebStore.csproj",
         "projectName": "WebStore",
-        "projectPath": "C:\\Users\\chuon\\Downloads\\QuanLyBanSach\\WebStore\\WebStore\\WebStore.csproj",
+        "projectPath": "C:\\Users\\chuon\\source\\repos\\WebStore\\WebStore\\WebStore.csproj",
         "packagesPath": "C:\\Users\\chuon\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\chuon\\Downloads\\QuanLyBanSach\\WebStore\\WebStore\\obj\\",
+        "outputPath": "C:\\Users\\chuon\\source\\repos\\WebStore\\WebStore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages"

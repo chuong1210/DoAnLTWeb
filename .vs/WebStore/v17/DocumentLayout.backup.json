@@ -94,15 +94,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
             },
             {
               "$type": "Bookmark",
@@ -134,8 +130,7 @@
               "RelativeToolTip": "WebStore\\Servicie\\RoleDB.cs",
               "ViewState": "AgIAACsAAAAAAAAAAAAQwFYAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T11:11:35.874Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-23T11:11:35.874Z"
             },
             {
               "$type": "Document",
@@ -147,8 +142,7 @@
               "RelativeToolTip": "WebStore\\Controllers\\QuanLyController.cs",
               "ViewState": "AgIAAB0AAAAAAAAAAAAowDAAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T10:47:52.811Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-23T10:47:52.811Z"
             },
             {
               "$type": "Document",
@@ -160,8 +154,7 @@
               "RelativeToolTip": "WebStore\\ConnectStringValue\\ConnectStringValue.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T04:28:47.376Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-24T04:28:47.376Z"
             },
             {
               "$type": "Document",
@@ -173,8 +166,7 @@
               "RelativeToolTip": "WebStore\\Views\\Book\\Details.cshtml",
               "ViewState": "AgIAADMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-23T10:31:59.604Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-23T10:31:59.604Z"
             },
             {
               "$type": "Document",
@@ -199,8 +191,7 @@
               "RelativeToolTip": "WebStore\\Views\\QuanLy\\EditAccount.cshtml",
               "ViewState": "AgIAAFwAAAAAAAAAAAAAAGQAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-24T04:28:32.904Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-24T04:28:32.904Z"
             },
             {
               "$type": "Document",
@@ -212,8 +203,7 @@
               "RelativeToolTip": "WebStore\\Servicie\\DonHangDB.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAjwCEAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T08:55:19.405Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-15T08:55:19.405Z"
             },
             {
               "$type": "Document",
@@ -225,8 +215,7 @@
               "RelativeToolTip": "WebStore\\Models\\SachDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T11:12:29.227Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-23T11:12:29.227Z"
             },
             {
               "$type": "Document",
@@ -238,8 +227,7 @@
               "RelativeToolTip": "WebStore\\Views\\QuanLy\\ManagerAccount.cshtml",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-24T11:42:06.53Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-24T11:42:06.53Z"
             },
             {
               "$type": "Document",
@@ -251,8 +239,7 @@
               "RelativeToolTip": "WebStore\\Models\\NguoiDungDTO.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAA3wB4AAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T11:39:27.934Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-23T11:39:27.934Z"
             },
             {
               "$type": "Document",
@@ -264,8 +251,7 @@
               "RelativeToolTip": "WebStore\\Servicie\\NhaXuatBanDB.cs",
               "ViewState": "AgIAABwAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T04:23:19.877Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-24T04:23:19.877Z"
             },
             {
               "$type": "Document",
@@ -277,8 +263,7 @@
               "RelativeToolTip": "WebStore\\Servicie\\SachDB.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T10:22:50.988Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-23T10:22:50.988Z"
             },
             {
               "$type": "Document",
@@ -290,8 +275,7 @@
               "RelativeToolTip": "WebStore\\Views\\Shared\\_ManagerLayout.cshtml",
               "ViewState": "AgIAABUAAAAAAAAAAIBJwC4AAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-15T08:58:00.042Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-15T08:58:00.042Z"
             },
             {
               "$type": "Document",
@@ -303,8 +287,7 @@
               "RelativeToolTip": "WebStore\\Views\\Order\\OrdersList.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAIBJwBYAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-15T08:54:09.838Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-15T08:54:09.838Z"
             },
             {
               "$type": "Document",
@@ -316,8 +299,7 @@
               "RelativeToolTip": "WebStore\\Views\\Order\\InfoOrderDetail.cshtml",
               "ViewState": "AgIAAAkAAAAAAAAAAIBJwE0AAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-15T08:53:16.23Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-15T08:53:16.23Z"
             },
             {
               "$type": "Document",
@@ -329,8 +311,7 @@
               "RelativeToolTip": "WebStore\\Servicie\\HoaDonDB.cs",
               "ViewState": "AgIAAAABAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T08:53:00.784Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-15T08:53:00.784Z"
             },
             {
               "$type": "Document",
@@ -342,8 +323,7 @@
               "RelativeToolTip": "WebStore\\Models\\BookType.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T08:49:07.245Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-15T08:49:07.245Z"
             },
             {
               "$type": "Document",
@@ -355,8 +335,7 @@
               "RelativeToolTip": "WebStore\\Models\\DonHang.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T08:48:21.17Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-15T08:48:21.17Z"
             },
             {
               "$type": "Document",
@@ -368,8 +347,7 @@
               "RelativeToolTip": "WebStore\\Models\\ChiTietVatPhamDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T08:48:16.103Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-15T08:48:16.103Z"
             },
             {
               "$type": "Document",
@@ -381,8 +359,7 @@
               "RelativeToolTip": "WebStore\\Models\\ChiTietDonHangDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T08:48:10.221Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-15T08:48:10.221Z"
             },
             {
               "$type": "Document",
@@ -394,8 +371,7 @@
               "RelativeToolTip": "WebStore\\Models\\HoaDonDTO.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAxwA0AAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T08:48:07.547Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-15T08:48:07.547Z"
             }
           ]
         }
