@@ -1,0 +1,135 @@
+﻿@using WebStore.Models
+@model dynamic
+
+@{
+    ViewData["Title"] = "DeleteOrder";
+    Layout = "~/Views/Shared/_ManagerLayout.cshtml";
+
+    string GetPaymentMethodDisplayName(string method)
+    {
+        return method switch
+        {
+            "TheTinDung" => "Thẻ tín dụng",
+            "ChuyenKhoan" => "Chuyển khoản",
+            "TienMat" => "Tiền mặt",
+            "TheMomo" => "Thẻ MoMo",
+            _ => "Không xác định"
+        };
+    }
+}
+
+<h1>Xóa đơn hàng</h1>
+
+<h3>Bạn có muốn xóa đơn hàng này không?</h3>
+<div>
+    <div class="row">
+        <div class="col-sm-8">
+            <div class="row">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th class="col-md-2"></th>
+                            <th class="col-md-6">
+                                Tên sách
+                            </th>
+                            <th class="col-md-4">
+                                Số lượng
+                            </th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        @foreach (var item in @Model.orderItem)
+                        {
+                            <tr>
+                                @foreach (var book in Model.lstBook)
+                                {
+                                    if (item.BookID == book.BookID)
+                                    {
+                                        <td>
+                                            <span class="image">
+                                                <img src="/images/@book.Image" height="120" width="110" alt="" />
+                                            </span>
+                                        </td>
+                                        <td>
+                                            @book.BookName
+                                        </td>
+                                    }
+                                }
+                                <td>
+                                    @item.Quantity
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="row">
+                <label class="col-sm-3">
+                    Hóa đơn ID
+                </label>
+                <div class="col-sm-9">
+                    @Model.infoOrder.DonHangId
+                </div>
+                <label class="col-sm-3">
+                    Tên người đặthàng
+                </label>
+                <div class="col-sm-9">
+                    @Model.infoOrder.TenNguoiDatHang
+                </div>
+                <label class="col-sm-3">
+                    Email
+                </label>
+                <div class="col-sm-9">
+                    @Model.infoOrder.Email
+                </div>
+                <label class="col-sm-3">
+                    Số điện thoại
+                </label>
+                <div class="col-sm-9">
+                    @Model.infoOrder.SoDienThoai
+                </div>
+                <label class="col-sm-3">
+                    Địa chỉ nhận hàng
+                </label>
+                <div class="col-sm-9">
+                    @Model.infoOrder.DiaChi
+                </div>
+                <label class="col-sm-3">
+                    Tổng tiền
+                </label>
+                <div class="col-sm-9">
+                    @Model.infoOrder.TongTien
+                </div>
+                <label class="col-sm-3">
+                    Trạng thái thanh toán
+                </label>
+                <div class="col-sm-9">
+                    @Model.infoOrder.TrangThaiTT
+                </div>  
+                <label class="col-sm-3">
+                    Ngày mua hàng
+                </label>
+                <div class="col-sm-9">
+                    @Model.infoOrder.NgayLap
+                </div>
+                <label class="col-sm-3">
+                   Phương thức thanh toán
+                </label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" value="@GetPaymentMethodDisplayName(Model.infoOrder.PhuongThucTT)" readonly />
+                </div>
+            </div>
+            <form asp-action="DeleteOrder">
+                <input hidden name="Id" value="@Model.infoOrder.Id" />
+                <input type="submit" value="Delete" class="btn btn-danger" />
+            </form>
+        </div>
+    </div>
+
+    <a class="button" asp-action="ManagerOrder">Back to List</a>
+
+</div>

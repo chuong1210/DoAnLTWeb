@@ -1,0 +1,130 @@
+﻿@model WebStore.Models.OrderDetailViewModel
+@using WebStore.Constraint;
+@{
+    ViewData["Title"] = "EditOrder";
+    Layout = "~/Views/Shared/_ManagerLayout.cshtml";
+}
+
+
+<h3>Chỉnh sửa đơn hàng</h3>
+<hr />
+<div class="row">
+    <div class="col-sm-8">
+        <div class="row">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="col-md-2"></th>
+                        <th class="col-md-6">
+                            Tên sách
+                        </th>
+                        <th class="col-md-4">
+                            Số lượng
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach (var item in @Model.OrderItem)
+                    {
+                        <tr>
+                            @foreach (var book in Model.LstBook)
+                            {
+                                if (item.BookID == book.BookID)
+                                {
+                                    <td>
+                                        <span class="image">
+                                            <img src="/images/@book.Image" height="120" width="110" alt="" />
+                                        </span>
+                                    </td>
+                                    <td>
+                                        @book.BookName
+                                    </td>
+                                }
+                            }
+                            <td>
+                                @item.Quantity
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <form asp-action="EditOrder">
+            <div class="form-group">
+                <label for="Id" class="control-label">Hóa đơn Id</label>
+                <input name="Id" class="form-control" value="@Model.InfoOrder.Id" />
+            </div>
+            <div class="form-group">
+                <label for="DonHangId" class="control-label">Đơn hàng Id</label>
+                <input class="form-control" value="@Model.InfoOrder.DonHangId" disabled />
+                <input hidden name="DonHangId" class="form-control" value="@Model.InfoOrder.DonHangId" />
+            </div>
+            <div class="form-group">
+                <label for="TenNguoiDatHang" class="control-label">Tên người đặt hàng</label>
+                <input name="TenNguoiDatHang" class="form-control" value="@Model.InfoOrder.TenNguoiDatHang" />
+            </div>
+            <div class="form-group">
+                <label for="Email" class="control-label">Email</label>
+                <input name="Email" class="form-control" value="@Model.InfoOrder.Email" />
+            </div>
+            <div class="form-group">
+                <label for="SoDienThoai" class="control-label">Số điện thoại</label>
+                <input name="SoDienThoai" class="form-control" value="@Model.InfoOrder.SoDienThoai" />
+            </div>
+            <div class="form-group">
+                <label for="DiaChi" class="control-label">Địa chỉ nhận hàng</label>
+                <input name="DiaChi" class="form-control" value="@Model.InfoOrder.DiaChi" />
+            </div>
+            <div class="form-group">
+                <label for="TongTien" class="control-label">Tổng tiền</label>
+                <input name="TongTien" class="form-control" value="@Model.InfoOrder.TongTien" />
+            </div>
+            <div class="form-group">
+                <label for="NgayLap" class="control-label">Ngày mua</label>
+                <input type="datetime-local" name="NgayLap" class="form-control"
+                       value="@Model.InfoOrder.NgayLap.ToString("yyyy-MM-ddTHH:mm")" />
+            </div>
+
+            <div class="form-group">
+                <label for="TrangThaiTT" class="control-label">Trạng thái thanh toán</label>
+                <input class="form-control" value="@Model.InfoOrder.TrangThaiTT" disabled />
+
+                <input hidden name="TrangThaiTT" class="form-control" value="@Model.InfoOrder.TrangThaiTT" />
+            </div>
+
+    @*          <div class="form-group">
+                 <label for="PhuongThucTT" class="control-label">Phương Thức Thanh Toán</label>
+                 @Html.DropDownListFor(model => model.PhuongThucTT,
+                          new SelectList(Enum.GetValues(typeof(PhuongThucThanhToan))),
+                          new { @class = "form-control" })
+             </div>
+ *@
+            <div class="form-group">
+                <label for="PhuongThucTT" class="control-label">Phương Thức Thanh Toán</label>
+                @Html.DropDownListFor(model => model.PhuongThucTT,
+                         new SelectList(new[]
+                         {
+                new { Value = "TheTinDung", Text = "Thẻ Tín Dụng" },
+                new { Value = "ChuyenKhoan", Text = "Chuyển Khoản" },
+                new { Value = "TienMat", Text = "Tiền Mặt" },
+                new { Value = "TheMomo", Text = "Thẻ MoMo" }
+                }, "Value", "Text"),
+                         new { @class = "form-control" })
+            </div>
+
+
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a class="button" asp-action="ManagerOrder">Back to List</a>
+</div>
+

@@ -1,0 +1,49 @@
+﻿@using WebStore.Models
+@model dynamic
+
+@{
+    ViewData["Title"] = "OrdersList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@if (ViewBag.msgErr)
+{
+    <h2 class="text-danger">Khách hàng hiện chưa có lịch sử mua hàng</h2>
+}
+else
+{
+    
+<h1>Lịch sử mua hàng</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Mã hóa đơn</th>
+
+            <th>Số tiền</th>
+            <th>Trạng thái hóa đơn</th>
+            <th>Ngày đặt hàng</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in @Model.lstOrder)
+        {
+            <tr>
+                    <td>@item.Id</td>
+                    <td>@item.TongTien</td>
+                <td>
+
+
+                        <h3> @item.TrangThaiTT</h3>
+                    
+                    </td>
+                    <td> @item.NgayLap</td>
+
+                <td>
+                        @Html.ActionLink("Chi tiết đơn hàng", "InfoOrderDetail", new { id = item.Id })
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+}
