@@ -2,16 +2,16 @@
 IF EXISTS (SELECT name FROM sys.databases WHERE name = N'QL_BANHTHIEBIDIENTU')
 BEGIN
     -- Đóng tất cả các kết nối đến database (nếu có)
-    ALTER DATABASE QL_BANHTHIEBIDIENTU SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+    ALTER DATABASE QL_BANTHIEBIDIENTU SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
     -- Xóa database
-    DROP DATABASE QL_BANHTHIEBIDIENTU;
+    DROP DATABASE QL_BANTHIEBIDIENTU;
 END
 -- Tạo database mới
-CREATE DATABASE QL_BANHTHIEBIDIENTU;
+CREATE DATABASE QL_BANTHIEBIDIENTU;
 
 GO
 
-USE QL_BANHTHIEBIDIENTU;
+USE QL_BANTHIEBIDIENTU;
 
 -- Thông báo database đã được tạo thành công
 PRINT N'Database QL_BANHTHIEBIDIENTU đã tạo thành công.';
@@ -185,6 +185,26 @@ ALTER TABLE NhaCungCap_SanPham
 ADD CONSTRAINT FK_NhaCungCap_SanPham_SanPham FOREIGN KEY (sanpham_id) REFERENCES SanPham(id),
     CONSTRAINT FK_NhaCungCap_SanPham_NhaCungCap FOREIGN KEY (nhacungcap_id) REFERENCES NhaCungCap(id);
 
+	-- Insert vào bảng LoaiSanPham (Loại sản phẩm: Thiết bị điện tử)
+INSERT INTO LoaiSanPham (id, ten)
+VALUES 
+('1', N'Thiết bị điện tử');
+
+-- Insert vào bảng NhaCungCap (Nhà cung cấp)
+INSERT INTO NhaCungCap (id, ten, diachi, sodienthoai, email)
+VALUES 
+('1', N'Công ty Điện Tử A', N'123 Đường ABC, Hà Nội', '0901234567', 'support@dientua.com'),
+('2', N'Công ty Điện Tử B', N'456 Đường DEF, TP.HCM', '0902345678', 'support@dientub.com');
+
+-- Insert vào bảng SanPham (Sản phẩm thuộc danh mục thiết bị điện tử)
+INSERT INTO SanPham (id, tenSanPham, loaiSanPham_id, gia, soLuongTon, hinhAnh, namSanXuat, moTa, nhaCungCap_id)
+VALUES 
+('1', N'Tivi Sony 55 Inch', '1', 15000000.00, 20, 'wwwroot\imagestivisony.jpg', 2022, N'Tivi Sony 4K Ultra HD, công nghệ X-Reality Pro.', '1'),
+('2', N'Điện thoại iPhone 14', '1', 25000000.00, 15, 'wwwroot\images\iphone17.jpg', 2023, N'Điện thoại Apple iPhone 14, màn hình OLED 6.1 inch, chip A16 Bionic.', '2'),
+('3', N'Laptop Dell XPS 13', '1', 30000000.00, 10, 'wwwroot\images\dell.jpg', 2023, N'Laptop Dell XPS 13, CPU Intel Core i7, RAM 16GB, SSD 512GB.', '1'),
+('4', N'Máy ảnh Canon EOS R6', '1', 50000000.00, 5, 'wwwroot\images\mayanh.jpg', 2021, N'Máy ảnh không gương lật Canon EOS R6, cảm biến Full-frame 20.1MP.', '2'),
+('5', N'Tai nghe Sony WH-1000XM4', '1', 7000000.00, 30, 'wwwroot\images\taynghe.jpg', 2020, N'Tai nghe chống ồn Sony WH-1000XM4, Bluetooth 5.0, pin 30 giờ.', '1'),
+('6', N'Máy tính bảng Samsung Galaxy Tab S8', '1', 20000000.00, 12, 'wwwroot\images\maytinhbang.jpg', 2022, N'Máy tính bảng Samsung Galaxy Tab S8, màn hình AMOLED 11 inch, S-Pen.', '2');
 
 
 
@@ -275,24 +295,18 @@ INSERT INTO DonHang (id, nguoidung_id, trangthaiDH, ngayDatHang, tongTien) VALUE
 
 
 -- Thêm dữ liệu vào bảng Chi tiết đơn hàng
-INSERT INTO ChiTietDonHang (id, donhang_id, sach_id, soLuong, giaDonVi) VALUES
-('CTDH001', 'DH001', 'S001', 2, 50000),
-('CTDH002', 'DH001', 'S002', 1, 75000),
-('CTDH003', 'DH002', 'S003', 3, 100000),
-('CTDH004', 'DH003', 'S004', 2, 80000),
-('CTDH005', 'DH003', 'S005', 1, 90000);
+INSERT INTO ChiTietDonHang (id, donhang_id, sanpham_id, soLuong, giaDonVi) VALUES
+('CTDH001', 'DH001', '2', 2, 50000),
+('CTDH002', 'DH001', '1', 1, 75000),
+('CTDH003', 'DH002', '1', 3, 100000),
+('CTDH004', 'DH003', '1', 2, 80000),
+('CTDH005', 'DH003', '1', 1, 90000);
 
 
 -- Thêm dữ liệu vào bảng Đặt trước
 
 -- Thêm dữ liệu vào bảng Tác giả - Sách
-INSERT INTO TacGia_Sach (sach_id, tacgia_id) VALUES
-('S001', 'TG001'),
-('S002', 'TG002'),
-('S003', 'TG003'),
-('S004', 'TG004'),
-('S005', 'TG005'),
-('S006', 'TG006');
+
 
 
 CREATE OR ALTER PROCEDURE SP_XoaNguoiDungVaLienQuan
